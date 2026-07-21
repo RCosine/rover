@@ -14,15 +14,14 @@ Updated BOM:
 6. Raspberry Pi 3 Model A+ - TBD
 7. DF Robot Motor Driver Expansion Board - [https://www.aliexpress.us/item/3256807075492551.html](https://www.aliexpress.us/item/3256807075492551.html) or [https://www.dfrobot.com/product-2851.html](https://www.dfrobot.com/product-2851.html)
 8. 12 mm M2.5 standoffs (spacers) + M2.5 screws
-9. Pi Zero Camera Cable Adapter - TBD
-10. Wide-lens camera module (for the small form factor Pi) - TBD
-11. Standard EMAX ES3054 (for hinge) - TBD
-12. SG90 servo motor (for ultrasonic sensor) - [https://www.aliexpress.us/item/3256806097043668.html](https://www.aliexpress.us/item/3256806097043668.html)
-13. Small circular mophead/scrub pad - TBD
-14. Wires - TBD
-15. 7.2V NiMH RC Battery Pack - [https://www.aliexpress.us/item/3256803941139133.html](https://www.aliexpress.us/item/3256803941139133.html)
-16. EU - US Adapter - [https://www.aliexpress.us/item/3256807292451852.html](https://www.aliexpress.us/item/3256807292451852.html)
-17. Tamiya Battery Connector - [https://www.aliexpress.us/item/3256806681308594.html](https://www.aliexpress.us/item/3256806681308594.html)
+9. Wide-lens camera module - TBD
+10. Standard EMAX ES3054 (for hinge) - TBD
+11. SG90 servo motor (for ultrasonic sensor) - [https://www.aliexpress.us/item/3256806097043668.html](https://www.aliexpress.us/item/3256806097043668.html)
+12. Small circular mophead/scrub pad - TBD
+13. Wires - TBD
+14. 7.2V NiMH RC Battery Pack - [https://www.aliexpress.us/item/3256803941139133.html](https://www.aliexpress.us/item/3256803941139133.html)
+15. EU - US Adapter - [https://www.aliexpress.us/item/3256807292451852.html](https://www.aliexpress.us/item/3256807292451852.html)
+16. Tamiya Battery Connector - [https://www.aliexpress.us/item/3256806681308594.html](https://www.aliexpress.us/item/3256806681308594.html)
 
 Time to design the battery pack based on dimensions 136.7x47.65x24.44mm.
 
