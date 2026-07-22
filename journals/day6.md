@@ -1,6 +1,6 @@
 Okay, so day 6. This is where the project is going to take a bit of a turn. I've been thinking about the design of this, and I came to the conclusion that I either fully commit to the mop mechanism (in which case I would need to use a 360 LiDAR sensor with ROS2) or commit to just a driving rover (a classic beginner project). Realizing that I am a beginner, I decided to remove the mop mechanism and instead focus on making the rover for driving around. However, I don't just want to copy the classic obstacle avoiding car (which uses the ultrasonic sensor on top of servo). Instead, I discovered something called an AI camera ($35 from HuskyLens) that is beginner friendly, and allows the robot to track and follow objects. This would be way more fun, and I plan to pair this with a single point lidar sensor on a servo (instead of ultrasound, and only because lidar seems cooler) as a sort of something to make the robot avoid hitting a wall in case it gets confused with the camera.
 
-So fBOM update:
+So BOM update:
 
 1. 4 80mm mecanum wheels - [https://www.aliexpress.us/item/3256804929248374.html](https://www.aliexpress.us/item/3256804929248374.html)
 2. 4 1:220 TT Motors - [https://www.aliexpress.us/item/3256808093084021.html](https://www.aliexpress.us/item/3256808093084021.html)
