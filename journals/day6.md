@@ -45,7 +45,7 @@ So compact! :) Now I will create a mount for the camera. I want camera to be on 
 
 Let me get the dimensions of the camera. Dimension: 25mm x 24mm x 17mm. Hmmm... Hmmm... How far apart are the holes?
 
-This is what it look slike btw, I might have to just guess.
+This is what it looks like btw, I might have to just guess.
 
 ![image](./images/pasted_20260722-212055.png)
 
@@ -98,3 +98,4 @@ This is better, I have the pin holes sticking out so that it can be wired withou
 Okay, I am exhausted. Basically tomorrow I need to make holes for the lidar wires to thread through the lid and into the chassis, then screw holes for the stepper motor to be fully fastened, and an idea I had to make the front of the robot clean (basically adding a face to cover everything except camera hole, although it does seem unnecessary because the lidar is so exposed anyways).
 
 Is that it after? I will round corners of chassis for visual appeal. Yeah wow that's it. I will attach the other stuff with double sided electric tape, but other than that, the CAD will be done. Next will be wiring diagrams and all. Awesome!
+Also forgot the holes in bottom chassis again for motor wires to go through.
