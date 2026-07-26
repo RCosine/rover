@@ -57,9 +57,7 @@ This is the sketch now
 
 Okay the mount front piece has been cut:
 
-![image](./images/pasted_20260724-230704.png)
-
-![image](./images/pasted_20260724-230943.png)
+![image](./images/pasted_20260724-230704.png)![image](./images/pasted_20260724-230943.png)
 
 Okay neat. Now to move everything into its proper place. Moving the things gets annoying.
 
