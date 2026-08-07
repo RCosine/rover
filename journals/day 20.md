@@ -30,3 +30,9 @@ I adjusted the orientation of the tapered parts to make it proper for 3d printin
 ![image](./images/pasted_20260807-200330.png)
 
 I setup similar parts together, and I'm not fully sure how projects usually have files for 3D printing. Let me search on that. Okay, actually it's fine to have everything on one file, so this is fine. Cool! So I will export this as .step and add to the models folder.
+
+Alright, so the repo is bascially done. Oops, I have to update the GitHub about description.
+
+![image](./images/pasted_20260807-200946.png)
+
+Okay, great!
