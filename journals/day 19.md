@@ -1,0 +1,5 @@
+Okay, so after a week of dedicated programming, with support from AI, the code has made some progress.
+
+The rover concept has again gone through another round of revisions. Instead of three modes, it's now two modes. One mode is a manual drive mode where there's a web app, on a phone or on desktop that has a simple HTML page with controls and a live footage stream that allows the user to control the rover by just looking at their controller. The other mode is a tracking mode, which basically follows whatever object you set it to follow (it uses a library that tells it how to follow stuff, something that is called coco).  This second mode also utilizes the ultrasonic sensor, which is on that servo, and the servo turns the sensor to look in the direction the robot is moving, and if the robot is about to hit something, it stops moving until the object it's supposed to be tracking is moved away from the obstacle, or the obstacle itself is moved.
+
+This is great and all, but I will continue to work on the code until it's ready to submit. Just a sort of progress checkup. And after the code I guess it's polishing the github repo itself.

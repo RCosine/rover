@@ -1,0 +1,136 @@
+<!--
+
+robot control web ui
+structure is from Neptune46/RaspiWebCar templates/index.html (https://github.com/Neptune46/RaspiWebCar/blob/master/templates/index.html)
+camera embed from: EbenKouao/pi-camera-stream-flask templates/index.html (https://github.com/EbenKouao/pi-camera-stream-flask/blob/master/templates/index.html)
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <title>Rover control UI</title>
+    <style>
+        body {
+            background: darkslategrey;
+            color: white;
+            font-family: Helvetica, Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            max-width: 640px;
+        }
+
+        table {
+            margin: 20px auto;
+            border-spacing: 8px;
+        }
+
+        td button {
+            width: 70px;
+            height: 70px;
+            font-size: 24px;
+            background: darkslategrey;
+            color: white;
+            border: 1px solid darkgrey;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        td button:active {
+            background: skyblue;
+        }
+
+        #stopBtn {
+            background: darkred;
+        }
+
+        #stopBtn:active {
+            background: red;
+        }
+
+        .rotate-row {
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        .rotate-row button {
+            width: 90px;
+            height: 50px;
+            font-size: 20px;
+            background: darkslategrey;
+            color: white;
+            border: 1px solid darkgrey;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 0 20px;
+        }
+
+        .rotate-row button:active {
+            background: skyblue;
+        }
+
+        #status {
+            color: skyblue;
+            margin: 10px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Rover controller</h1>
+    <img src="{{ url_for('video_feed') }}" alt="video-feed"/>
+    <div id="status">IDLE</div>
+    <table>
+        <tr>
+            <td><button onmousedown="send('strafe_fwd_left', '↖ FWD-L')" onmouseup="send('stop', 'IDLE')">↖</button></td>
+            <td><button onmousedown="send('fwd', 'FORWARD')" onmouseup="send('stop', 'IDLE')">▲</button></td>
+            <td><button onmousedown="send('strafe_fwd_right', '↗ FWD-R')" onmouseup="send('stop', 'IDLE')">↗</button></td>
+        </tr>
+        <tr>
+            <td><button onmousedown="send('left', 'LEFT')" onmouseup="send('stop', 'IDLE')">◀</button></td>
+            <td><button id="stopBtn" onclick="send('stop', 'IDLE')">■</button></td>
+            <td><button onmousedown="send('right', 'RIGHT')" onmouseup="send('stop', 'IDLE')">▶</button></td>
+        </tr>
+        <tr>
+            <td><button onmousedown="send('strafe_back_left', '↙ BACK-L')" onmouseup="send('stop', 'IDLE')">↙</button></td>
+            <td><button onmousedown="send('back', 'BACKWARD')" onmouseup="send('stop', 'IDLE')">▼</button></td>
+            <td><button onmousedown="send('strafe_back_right', '↘ BACK-R')" onmouseup="send('stop', 'IDLE')">↘</button></td>
+        </tr>
+    </table>
+
+    <div class="rotate-row">
+        <button onmousedown="send('rotate_left', 'ROTATE LEFT')" onmouseup="send('stop', 'IDLE')">↺ Left</button>
+        <button onmousedown="send('rotate_right', 'ROTATE RIGHT')" onmouseup="send('stop', 'IDLE')">↻ Right</button> 
+    </div>
+
+    <script>
+        function send(cmd, label) {
+            $('#status').text(label);
+            $.get('/' + cmd);
+        }
+
+        $(document).keydown(function(e) {
+            if (e.key == 'w' || e.key == 'ArrowUp')     send('fwd', 'FORWARD');
+            if (e.key == 's' || e.key == 'ArrowDown')   send('back', 'BACKWARD');
+            if (e.key == 'a' || e.key == 'ArrowLeft')   send('left', 'LEFT');
+            if (e.key == 'd' || e.key == 'ArrowRight')  send('right', 'RIGHT');
+            if (e.key == 'q')                           send('rotate_left', 'ROTATE LEFT');
+            if (e.key == 'e')                           send('rotate_right', 'ROTATE RIGHT');
+            if (e.key == ' ')                           send('stop', 'IDLE');
+        });
+        $(document).keyup(function(e) {
+            send('stop', 'IDLE');
+        }
+    )
+    </script>
+</body>
+</html>

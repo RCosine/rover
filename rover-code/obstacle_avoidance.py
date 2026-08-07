@@ -148,6 +148,4 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         ut.stop()
         GPIO.cleanup()
-        print("\n done")
-        
-        if (script )
+        print("\n done")            

@@ -1,0 +1,36 @@
+<!--
+
+Based off of EbenKouao/pi-camera-stream-flask templates/index.html (https://github.com/EbenKouao/pi-camera-stream-flask/blob/master/templates/index.html)
+Edited some css for custom colors
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <title>Rover stream</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stream (Port 2204)</h1>
+    <img src = "{{ url_for('video_feed') }}" alt = "rover stream">
+</body>
+</html>

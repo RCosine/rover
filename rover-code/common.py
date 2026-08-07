@@ -1,6 +1,6 @@
 """
-This file has utility functions which are used in 'object_tracking.py
- file
+Based off of the repo jiteshsaini/robotics-level-4 — earthrover/object_tracking/common.py]
+This file has utility functions which are used in 'object_tracking.py file
  
 This code is based on Google-Coral Object Detection example at: https://github.com/google-coral/examples-camera/tree/master/opencv
 
@@ -13,15 +13,15 @@ import platform
 
 EDGETPU_SHARED_LIB = {
     'Linux': 'libedgetpu.so.1',
-    'Darwin': 'libedgetpu.1.dylib',
+    'Darwin': 'libedgetpu.1.dy',
     'Windows': 'edgetpu.dll'
 }[platform.system()]
-
-def make_interpreter_0 (model_file):
+            
+def make_interpreter_0(model_file):
     model_file, *device = model_file.split('@')
     return tflite.Interpreter(model_path = model_file)
 
-def make_interpreter_1 (model_file):
+def make_interpreter_1(model_file):
     model_file, * device = model_file.split('@')
     return tflite.Interpreter(
         model_path = model_file,
@@ -32,25 +32,25 @@ def make_interpreter_1 (model_file):
     
 # copies data to input tensor
 
-def set_input (interpreter, image, resample = Image.NEAREST):
+def set_input(interpreter, image, resample = Image.NEAREST):
     image = image.resize((input_image_size(interpreter) [0:2]), resample)
     input_tensor(interpreter) [:, :] = image
 
 # returns input image size as (width, height, channels) tuple
 
-def input_image_size (interpreter):
+def input_image_size(interpreter):
     _, height, width, channels = interpreter.get_input_details() [0] ['shape']
     return width, height, channels
 
 # returns input tensor view as numpy array of shape (height, width, 3)
 
-def input_tensor (interpreter):
+def input_tensor(interpreter):
     tensor_index = interpreter.get_input_details() [0] ['index']
     return interpreter.tensor(tensor_index) () [0]
 
 # Returns dequantized output tensor if quantized before
 
-def output_tensor (interpreter, i):
+def output_tensor(interpreter, i):
     output_details = interpreter.get_output_details() [i]
     output_data = np.squeeze(interpreter.tensor(output_details['index'])())
     if 'quantization' not in output_details:
@@ -61,14 +61,14 @@ def output_tensor (interpreter, i):
     return scale * (output_data - zero_point)
 
 import time
-def time_elapsed (start_time, event):
+def time_elapsed(start_time, event):
     time_now = time.time()
     duration = (time_now - start_time) * 1000
     duration = round(duration, 2)
     print (">>>", duration, " ms (" , event, ")")
     
 import os
-def load_model (model_dir, model, lbl, edgetpu):
+def load_model(model_dir, model, lbl, edgetpu):
     print('Loading from directory: {} '.format(model_dir))
     print('Loading Model: {} '.format(model))
     print('Loading Labels: {} '.format(lbl))
@@ -86,7 +86,7 @@ def load_model (model_dir, model, lbl, edgetpu):
     return interpreter, labels
 
 import re
-def load_labels (path):
+def load_labels(path):
     p = re.compile(r'\s*(\d+)(.+)')
     with open(path, 'r', encoding = 'utf-8') as f:
         lines = (p.match(line).groups() for line in f.readlines())
