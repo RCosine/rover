@@ -48,6 +48,12 @@ To view an online-hosted 360 degree view of this robot, click [here](https://vie
 | 14 | 18650 Battery Charger (2 Slots) | 1 | 6.77 | AliExpress | [Link](https://www.aliexpress.us/item/3256806967255191.html) | Dual-slot lithium-ion battery charger |
 | **TOTAL** | **Grand Total** | **15** | **136.55** | | | **All electronic components + battery shipping included** |
 
+### Wiring Diagram
+
+Below is the wiring diagram to help you connect the motors, sensors, batteries, and the Raspberry Pi with the Motor Driver:
+
+![Wiring Diagram](./wiring-diagram.png)
+
 ### Instructions
 
 Please go to the dedicated [instructions.md](./instructions.md) file to see instructions.
